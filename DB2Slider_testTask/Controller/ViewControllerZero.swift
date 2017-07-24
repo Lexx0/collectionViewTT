@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ViewControllerZero: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var segmentController: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collection: UICollectionView!
     
     var contacts = [ContactDetailsModel]()
 
@@ -28,7 +28,7 @@ class ViewControllerZero: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func initConfig() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
+        self.collection.dataSource = self
+        self.collection.delegate = self
     }
 }

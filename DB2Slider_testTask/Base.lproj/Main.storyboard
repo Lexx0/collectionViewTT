@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GRG-Jj-viX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Community-->
         <scene sceneID="DXD-Gu-w7O">
             <objects>
-                <viewController id="koA-Sd-CJa" sceneMemberID="viewController">
+                <viewController id="koA-Sd-CJa" customClass="ViewControllerOne" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bzb-xm-Ozf"/>
                         <viewControllerLayoutGuide type="bottom" id="Rl8-UQ-HGg"/>
@@ -22,13 +22,51 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="t8I-11-GYR"/>
+                    <tabBarItem key="tabBarItem" title="Community" image="community" id="t8I-11-GYR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rXW-30-HCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140" y="734"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
+        <scene sceneID="oFe-61-Ewl">
+            <objects>
+                <viewController id="qvz-Ar-uJC" customClass="ViewControllerTwo" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qz7-bt-TfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="8Wz-Px-uAu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lXP-mq-yYw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" image="userAvatarMainPicture" id="lDg-om-W9r"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S7-QN-iX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-903" y="1308"/>
+        </scene>
+        <!--Help-->
+        <scene sceneID="Xhd-i0-zl4">
+            <objects>
+                <viewController id="92I-3t-PlH" customClass="ViewControllerThree" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ieR-WI-2Vy"/>
+                        <viewControllerLayoutGuide type="bottom" id="rbR-vj-oTV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ywW-8u-e8S">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help" image="info" id="woa-Yv-4B1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2j-1r-2zW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-903" y="-233"/>
+        </scene>
+        <!--Kurses-->
         <scene sceneID="OU5-ZF-e2V">
             <objects>
                 <viewController id="GRG-Jj-viX" customClass="ViewControllerZero" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -41,7 +79,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jCY-du-yC6"/>
+                    <tabBarItem key="tabBarItem" title="Kurses" image="maineCoon" id="jCY-du-yC6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67l-k6-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -59,6 +97,8 @@
                     <connections>
                         <segue destination="GRG-Jj-viX" kind="relationship" relationship="viewControllers" id="oJv-oa-oaW"/>
                         <segue destination="koA-Sd-CJa" kind="relationship" relationship="viewControllers" id="EGS-Sp-BTm"/>
+                        <segue destination="qvz-Ar-uJC" kind="relationship" relationship="viewControllers" id="kWh-mw-9Ww"/>
+                        <segue destination="92I-3t-PlH" kind="relationship" relationship="viewControllers" id="lFH-OC-OyE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE2-tp-pfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,4 +106,10 @@
             <point key="canvasLocation" x="-903" y="529"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="community" width="32" height="32"/>
+        <image name="info" width="32" height="32"/>
+        <image name="maineCoon" width="32" height="32"/>
+        <image name="userAvatarMainPicture" width="32" height="32"/>
+    </resources>
 </document>

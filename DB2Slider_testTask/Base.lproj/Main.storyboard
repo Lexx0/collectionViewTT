@@ -31,7 +31,7 @@
         <!--Item 1-->
         <scene sceneID="OU5-ZF-e2V">
             <objects>
-                <viewController id="GRG-Jj-viX" sceneMemberID="viewController">
+                <viewController id="GRG-Jj-viX" customClass="ViewControllerZero" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rvx-kQ-P84"/>
                         <viewControllerLayoutGuide type="bottom" id="401-2O-itv"/>

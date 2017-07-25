@@ -21,6 +21,7 @@
 		799996561F26314E00126FE8 /* ContactDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996541F26314E00126FE8 /* ContactDetailsCell.swift */; };
 		799996571F26314F00126FE8 /* ContactDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 799996551F26314E00126FE8 /* ContactDetailsCell.xib */; };
 		7999965A1F277E2200126FE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996591F277E2200126FE8 /* Constants.swift */; };
+		7999965C1F2782B400126FE8 /* DialogDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		799996541F26314E00126FE8 /* ContactDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailsCell.swift; path = View/ContactDetailsCell.swift; sourceTree = "<group>"; };
 		799996551F26314E00126FE8 /* ContactDetailsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ContactDetailsCell.xib; path = View/ContactDetailsCell.xib; sourceTree = "<group>"; };
 		799996591F277E2200126FE8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utils/Constants.swift; sourceTree = "<group>"; };
+		7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogDetailsVC.swift; path = Controller/DialogDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				7999964A1F260D1000126FE8 /* ViewControllerOne.swift */,
 				7999964C1F260D3000126FE8 /* ViewControllerTwo.swift */,
 				7999964E1F260D9B00126FE8 /* ViewControllerThree.swift */,
+				7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				7999964F1F260D9B00126FE8 /* ViewControllerThree.swift in Sources */,
 				7999964D1F260D3000126FE8 /* ViewControllerTwo.swift in Sources */,
 				7999965A1F277E2200126FE8 /* Constants.swift in Sources */,
+				7999965C1F2782B400126FE8 /* DialogDetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

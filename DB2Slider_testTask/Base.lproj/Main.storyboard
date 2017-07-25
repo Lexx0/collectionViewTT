@@ -114,6 +114,7 @@
                     <connections>
                         <outlet property="collection" destination="Qet-ew-338" id="soM-7D-HQs"/>
                         <outlet property="segmentController" destination="V3n-G5-iWd" id="SWu-0D-y7Q"/>
+                        <segue destination="f8g-K9-88h" kind="show" identifier="goToDialogDetailsVC" id="2RB-9V-qK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67l-k6-Fby" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,6 +140,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EE2-tp-pfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-903" y="529"/>
+        </scene>
+        <!--Dialog DetailsVC-->
+        <scene sceneID="xiO-Rj-8MV">
+            <objects>
+                <viewController id="f8g-K9-88h" customClass="DialogDetailsVC" customModule="DB2Slider_testTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="20w-mz-4b0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FCh-fE-zcT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sjl-Gr-jWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v2F-uW-aOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="-1"/>
         </scene>
     </scenes>
     <resources>

@@ -29,6 +29,10 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         
         if let cell = collection.dequeueReusableCell(withReuseIdentifier: "ContactDetailsCell", for: indexPath) as? ContactDetailsCell {
             
+            let contact: ContactDetailsModel!
+            
+//            cell.configureCell(contact)
+            
             return cell
             
         } else {
@@ -36,8 +40,42 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let contact: ContactDetailsModel!
+        
+        contact = contacts[indexPath.row]
+        
+        performSegue(withIdentifier: "goToDialogDetailsVC", sender: contact)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return contacts.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    
+    
     func initConfig() {
         self.collection.dataSource = self
         self.collection.delegate = self
+        
+//        self.collection.
+        
+        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToDialogDetailsVC" {
+            
+            if let detailsVC = segue.destination as? DialogDetailsVC {
+                if let dialog = sender as? ContactDetailsModel {
+                    detailsVC.contact = dialog
+                }
+            }
+        }
     }
 }

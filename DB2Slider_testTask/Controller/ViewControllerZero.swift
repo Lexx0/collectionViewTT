@@ -19,6 +19,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         super.viewDidLoad()
 
         initConfig()
+        
+        parseDialogs()
 
     }
 
@@ -70,6 +72,10 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
 //        self.collection.
         
         self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
+    }
+    
+    func parseDialogs() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

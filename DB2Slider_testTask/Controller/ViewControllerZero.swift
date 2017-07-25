@@ -22,9 +22,18 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if let cell = collection.dequeueReusableCell(withReuseIdentifier: "ContactDetailsCell", for: indexPath) as? ContactDetailsCell {
+            
+            return cell
+            
+        } else {
+            return  UICollectionViewCell()
+        }
     }
     
     func initConfig() {

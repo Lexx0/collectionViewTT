@@ -18,9 +18,24 @@ class ContactDetailsCell: UICollectionViewCell {
     @IBOutlet weak var badgeIntBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
+    var cell0: ContactDetailsModel
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+        
+        layer.cornerRadius = 5.0
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
+    }
+    
+    func configureCell(_ cell: ContactDetailsModel) {
+        self.cell0 = cell
+        
+        userPicImg.image
     }
 
 }

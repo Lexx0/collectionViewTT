@@ -56,6 +56,11 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         return 1
     }
     
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+
+        return CGSize(width: self.view.frame.size.width, height: 150)
+    }
+    
     
     
     func initConfig() {

@@ -18,14 +18,9 @@ class ContactDetailsCell: UICollectionViewCell {
     @IBOutlet weak var badgeIntBtn: UIButton!
     @IBOutlet weak var nextBtn: UIButton!
     
-    var cell0: ContactDetailsModel
+    var cell0: ContactDetailsModel!
     
-    required init?(coder aCoder: NSCoder) {
-        super.init(coder: aCoder)
-        
-        layer.cornerRadius = 5.0
-        
-    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,6 +35,13 @@ class ContactDetailsCell: UICollectionViewCell {
 //        dateLbl.text = self.cell0.
         
         userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
+    }
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+        
+        layer.cornerRadius = 5.0
+        
     }
 
 }

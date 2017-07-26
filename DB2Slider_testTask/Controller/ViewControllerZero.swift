@@ -68,19 +68,24 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 
-        return CGSize(width: self.view.frame.size.width, height: 150)
+        return CGSize(width: self.view.frame.size.width, height: 100)
     }
     
     
     
+    
     func initConfig() {
+        
+//        self.collection.
+        
+//        let flowLayout = UICollectionViewFlowLayout()
+//        self.collection(frame: self.view.bounds, collectionViewLayout: flowLayout)
+        
         self.collection.dataSource = self
         self.collection.delegate = self
         
-//        self.collection.
-
-        
-//        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
+//        self.collection.init(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
+        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
 //        
         
     }

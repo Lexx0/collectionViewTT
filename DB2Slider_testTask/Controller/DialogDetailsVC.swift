@@ -34,7 +34,7 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
             cell.messageFromContact.text = cellData!.longDialog[indexPath.row]
             cell.userPic.image = UIImage(named: cellData!.profilePicture)
             
-            if indexPath.row != cellData!.longDialog.count {
+            if indexPath.row != cellData!.longDialog.count-1 {
                 cell.userPic.isHidden = true
             } else {
                 cell.userPic.isHidden = false

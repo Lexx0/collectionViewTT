@@ -92,8 +92,6 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     func parseDialogs() {
         
-        print("count", self.contacts.count)
-        
         let names = ["Rick Sanches", "Morty", "Scorpion", "Pickachoo"]
         let dialogs = ["donth think about it", "um, rick... This is bad idea", "Get over here", "Pika pika pikachoo"]
         let badgeCounts = ["1", "0", "0", "0"]
@@ -118,6 +116,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
             if let detailsVC = segue.destination as? DialogDetailsVC {
                 if let dialog = sender as? ContactDetailsModel {
                     detailsVC.contact = dialog
+                    
+                    print("імя будет ", dialog.name)
                 }
             }
         }

@@ -27,6 +27,11 @@ class ContactDetailsCell: UICollectionViewCell {
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
         
+//        badgeIntBtn.layer.cornerRadius = 5.0
+//        badgeIntBtn.layer.masksToBounds = true
+        
+//        badgeIntBtn
+//        layer.cornerRadius = 5.0
 //        super.init(frame: )
 //        let size0 = CGSize(width: super.self.view.frame.size.width, height: 100)
 //        super.init(frame: size0, collectionViewLayout, layout: UICollectionViewLayout)
@@ -55,14 +60,19 @@ class ContactDetailsCell: UICollectionViewCell {
         userPicImg.image = UIImage(named: self.cell0.profilePicture)
         badgeIntBtn.setTitle(self.cell0.badgeInt, for: .normal)
         
+        badgeIntBtn.layer.cornerRadius = 15.0
+        badgeIntBtn.layer.masksToBounds = true
+        badgeIntBtn.backgroundColor = .blue
+        
+        userPicImg.layer.cornerRadius = 21.0
+        userPicImg.layer.masksToBounds = true
+        
         if self.cell0.badgeInt == "0" {
             badgeIntBtn.isHidden = true
         } else {
             badgeIntBtn.isHidden = false
         }
         
-
-//        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
     }
 
 }

@@ -31,14 +31,6 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         
         if let cell = collection.dequeueReusableCell(withReuseIdentifier: "ContactDetailsCell", for: indexPath) as? ContactDetailsCell {
             
-//            let cellData = contacts[indexPath.row]
-//            
-//            cell.userPicImg.image = UIImage(named: cellData.profilePicture)
-//            cell.nameLbl.text = cellData.name
-//            cell.messageLbl.text = cellData.shortMessage
-//            cell.dateLbl.text = cellData.date
-//            cell.badgeIntBtn.setTitle(cellData.date, for: .normal
-            
             let contactData: ContactDetailsModel! = self.contacts[indexPath.row]
             
             cell.configureCell(contactData)
@@ -75,28 +67,15 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     
     func initConfig() {
-        
-//        self.collection.
-        
-//        let flowLayout = UICollectionViewFlowLayout()
-//        self.collection(frame: self.view.bounds, collectionViewLayout: flowLayout)
-        
+
         self.collection.dataSource = self
         self.collection.delegate = self
         
-//        self.collection.init(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
-//        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
-//
-        
+        self.title = "Chats"
+
     }
     
     func parseDialogs() {
-        
-        let names = ["Rick Sanches", "Morty", "Scorpion", "Pickachoo"]
-        let dialogs = ["donth think about it", "um, rick... This is bad idea", "Get over here", "Pika pika pikachoo"]
-        let badgeCounts = ["1", "0", "0", "0"]
-        let dates = ["tomorrow 6:01", "yesterday 10:00", "Feb,10 20:10", "April, 6 10:21"]
-        let dialogChain = [["donth think about it", "I'm just trying to make a conversation"], ["um, rick...", "This is bad idea", "Rick?.."], ["Your soul is mine", "Get over here"], ["Pika", "pika", "pikachoo", "pikachoo","pikachoo"]]
         
         if contacts.count == 0 {
             
@@ -104,7 +83,6 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
                 self.contacts += [ContactDetailsModel(profilePicture: "upic0"+String(self.contacts.count), name: names[contacts.count], shortMessage: dialogs[contacts.count], badgeInt: badgeCounts[contacts.count], date: dates[contacts.count], longDialog: dialogChain[contacts.count]/*, faceID: contacts.count*/)]
             }
         }
-        
         
         self.collection.reloadData()
     }

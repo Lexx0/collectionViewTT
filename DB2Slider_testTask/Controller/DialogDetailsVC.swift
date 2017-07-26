@@ -10,8 +10,8 @@ import UIKit
 
 class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var backBtn: UIButton!
+//    @IBOutlet weak var titleLabel: UILabel!
+//    @IBOutlet weak var backBtn: UIButton!
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -34,11 +34,11 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
             cell.messageFromContact.text = cellData!.longDialog[indexPath.row]
             cell.userPic.image = UIImage(named: cellData!.profilePicture)
             
-            if indexPath.row != cellData!.longDialog.count-1 {
-                cell.userPic.isHidden = true
-            } else {
-                cell.userPic.isHidden = false
-            }
+//            if indexPath.row != cellData!.longDialog.count-1 {
+//                cell.userPic.isHidden = true
+//            } else {
+//                cell.userPic.isHidden = false
+//            }
             
             return cell
         } else {
@@ -56,12 +56,12 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     
-    @IBAction func backBtnTapped(_ sender: Any) {
-        
-        print("тиц")
-//        self.navigationController!.popViewController(animated: true)
-        navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func backBtnTapped(_ sender: Any) {
+//        
+//        print("тиц")
+////        self.navigationController!.popViewController(animated: true)
+//        navigationController?.popViewController(animated: true)
+//    }
 
     func initConfig() {
         self.collection.dataSource = self
@@ -69,7 +69,8 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
         
         print("покемон", contact.name)
         
-        self.titleLabel.text = contact.name
+        self.title = self.contact.name
+//        self.titleLabel.text = contact.name
         
     }
 }

@@ -31,8 +31,8 @@ class ContactDetailsCell: UICollectionViewCell {
 //        self.cell0 = cell
 //        
 //        nameLbl.text = self.cell0.name.capitalized
-////        messageLbl.text = self.cell0.
-////        dateLbl.text = self.cell0.
+//        messageLbl.text = self.cell0.
+//        dateLbl.text = self.cell0.
 //        
 //        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
 //    }
@@ -40,7 +40,7 @@ class ContactDetailsCell: UICollectionViewCell {
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
         
-        layer.cornerRadius = 5.0
+//        layer.cornerRadius = 5.0
         
     }
 

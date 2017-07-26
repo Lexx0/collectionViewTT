@@ -81,6 +81,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     func parseDialogs() {
         
+        print("count", self.contacts.count)
+        
         let names = ["Rick Sanches", "Morty", "Scorpion", "Pickachoo"]
         let dialogs = ["donth think about it", "um, rick... This is bad idea", "Get over here", "Pika pika pikachoo"]
         let badgeCounts = ["1", "0", "0", "0"]
@@ -89,10 +91,11 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         
         if contacts.count == 0 {
             
-            for name in names {
-                self.contacts += ContactDetailsModel(profilePicture: "upic0"+String(self.contacts.count), name: names[contacts.count], shortMessage: dialogs[contacts.count], badgeInt: badgeCounts[contacts.count], date: dates[contacts.count], longDialog: dialogChain[contacts.count]/*, faceID: contacts.count*/)
+            for _ in names {
+                self.contacts += [ContactDetailsModel(profilePicture: "upic0"+String(self.contacts.count), name: names[contacts.count], shortMessage: dialogs[contacts.count], badgeInt: badgeCounts[contacts.count], date: dates[contacts.count], longDialog: dialogChain[contacts.count]/*, faceID: contacts.count*/)]
             }
         }
+        
         
         self.collection.reloadData()
     }

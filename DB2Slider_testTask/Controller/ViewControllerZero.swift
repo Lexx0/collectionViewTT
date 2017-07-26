@@ -85,8 +85,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         self.collection.delegate = self
         
 //        self.collection.init(frame: CGRectZero, collectionViewLayout: UICollectionViewFlowLayout())
-        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
-//        
+//        self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
+//
         
     }
     

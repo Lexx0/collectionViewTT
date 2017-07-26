@@ -20,9 +20,9 @@ class ContactDetailsCell: UICollectionViewCell {
     
     var cell0: ContactDetailsModel!
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//    }
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -33,10 +33,10 @@ class ContactDetailsCell: UICollectionViewCell {
 //        layer.cornerRadius = 5.0
         
     }
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        
+//    }
 
     
 //    required init?(coder aCoder: NSCoder) {

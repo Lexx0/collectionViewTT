@@ -31,14 +31,17 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         
         if let cell = collection.dequeueReusableCell(withReuseIdentifier: "ContactDetailsCell", for: indexPath) as? ContactDetailsCell {
             
-//            let contact: ContactDetailsModel!
-            let cellData = contacts[indexPath.row]
+//            let cellData = contacts[indexPath.row]
+//            
+//            cell.userPicImg.image = UIImage(named: cellData.profilePicture)
+//            cell.nameLbl.text = cellData.name
+//            cell.messageLbl.text = cellData.shortMessage
+//            cell.dateLbl.text = cellData.date
+//            cell.badgeIntBtn.setTitle(cellData.date, for: .normal
             
-            cell.userPicImg.image = UIImage(named: cellData.profilePicture)
-            cell.nameLbl.text = cellData.name
-            cell.messageLbl.text = cellData.shortMessage
-            cell.dateLbl.text = cellData.date
-            cell.badgeIntBtn.setTitle(cellData.date, for: .normal)
+            let contactData: ContactDetailsModel! = self.contacts[indexPath.row]
+            
+            cell.configureCell(contactData)
             
             return cell
             
@@ -77,6 +80,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
 //        self.collection.
         
         self.collection.register(ContactDetailsCell.self, forCellWithReuseIdentifier: "ContactDetailsCell")
+        
+        
     }
     
     func parseDialogs() {

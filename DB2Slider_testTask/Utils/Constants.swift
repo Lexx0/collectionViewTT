@@ -8,7 +8,7 @@
 
 import Foundation
 
-public let URL_BASE_FOR_FACE_IMAGE = "http://pokeapi.co"
-public let URL_POKERMON = "/api/v1/pokermon/"
-
-typealias DownloadConplete = () -> ()
+//public let URL_BASE_FOR_FACE_IMAGE = "http://pokeapi.co"
+//public let URL_POKERMON = "/api/v1/pokermon/"
+//
+//typealias DownloadConplete = () -> ()

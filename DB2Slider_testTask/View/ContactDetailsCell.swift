@@ -20,28 +20,34 @@ class ContactDetailsCell: UICollectionViewCell {
     
     var cell0: ContactDetailsModel!
     
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-//    func configureCell(_ cell: ContactDetailsModel) {
-//        self.cell0 = cell
-//        
-//        nameLbl.text = self.cell0.name.capitalized
-//        messageLbl.text = self.cell0.
-//        dateLbl.text = self.cell0.
-//        
-//        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
-//    }
-    
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
+        //        layer.cornerRadius = 5.0
+    }
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        
+//    }
+
+    
+//    required init?(coder aCoder: NSCoder) {
+//        super.init(coder: aCoder)
+//        
+////        layer.cornerRadius = 5.0
+//        
+//    }
+    
+    func configureCell(_ cell: ContactDetailsModel) {
+        self.cell0 = cell
+
+        nameLbl.text = self.cell0.name.capitalized
+        messageLbl.text = self.cell0.shortMessage
+        dateLbl.text = self.cell0.date
+        userPicImg.image = UIImage(named: self.cell0.profilePicture)
+        badgeIntBtn.setTitle(self.cell0.badgeInt, for: .normal)
         
-//        layer.cornerRadius = 5.0
-        
+
+//        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
     }
 
 }

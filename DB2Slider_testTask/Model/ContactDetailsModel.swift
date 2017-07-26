@@ -12,22 +12,25 @@ class ContactDetailsModel {
     
     var profilePicture: String!
     var name: String!
-    var message: String!
+    var shortMessage: String!
+    var longDialog: [String]!
     var badgeInt: String!
     var date: String!
     
-    var faceID: Int!
-    var faceURL: String!
+//    var faceID: Int!
+//    var faceURL: String!
     
     
-    init(profilePicture: String, name: String, message: String, badgeInt: String, date: String) {
+    init(profilePicture: String, name: String, shortMessage: String, badgeInt: String, date: String, longDialog: [String]/*, faceID: Int*/) {
         self.profilePicture = profilePicture
         self.name = name
-        self.message = message
+        self.shortMessage = shortMessage
         self.badgeInt = badgeInt
         self.date = date
+        self.longDialog = longDialog
+//        self.faceID = faceID
         
-        self.faceURL = "\(URL_BASE_FOR_FACE_IMAGE)\(URL_POKERMON)\(self.faceID)"
+//        self.faceURL = "\(URL_BASE_FOR_FACE_IMAGE)\(URL_POKERMON)\(self.faceID)"
     }
     
 }

@@ -27,15 +27,15 @@ class ContactDetailsCell: UICollectionViewCell {
         
     }
     
-    func configureCell(_ cell: ContactDetailsModel) {
-        self.cell0 = cell
-        
-        nameLbl.text = self.cell0.name.capitalized
-//        messageLbl.text = self.cell0.
-//        dateLbl.text = self.cell0.
-        
-        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
-    }
+//    func configureCell(_ cell: ContactDetailsModel) {
+//        self.cell0 = cell
+//        
+//        nameLbl.text = self.cell0.name.capitalized
+////        messageLbl.text = self.cell0.
+////        dateLbl.text = self.cell0.
+//        
+//        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
+//    }
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)

@@ -55,6 +55,12 @@ class ContactDetailsCell: UICollectionViewCell {
         userPicImg.image = UIImage(named: self.cell0.profilePicture)
         badgeIntBtn.setTitle(self.cell0.badgeInt, for: .normal)
         
+        if self.cell0.badgeInt == "0" {
+            badgeIntBtn.isHidden = true
+        } else {
+            badgeIntBtn.isHidden = false
+        }
+        
 
 //        userPicImg.image = UIImage(named: "\(self.cell0.faceID)")
     }

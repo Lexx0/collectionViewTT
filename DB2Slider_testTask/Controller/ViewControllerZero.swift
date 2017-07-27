@@ -15,6 +15,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     var contacts = [ContactDetailsModel]()
 
+    var swipeLeftGestureRecognizer: UISwipeGestureRecognizer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -72,6 +74,8 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         self.collection.delegate = self
         
         self.title = "Chats"
+        
+        self.swipeLeftGestureRecognizer.direction = .left
 
     }
     

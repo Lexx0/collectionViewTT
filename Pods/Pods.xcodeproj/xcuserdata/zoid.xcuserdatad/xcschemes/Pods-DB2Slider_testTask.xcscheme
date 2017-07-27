@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E63314A854F50C8186305BCC13E965BA'
+               BlueprintIdentifier = '61A6C7DD2C78D0DD8A10A1FC50767B37'
                BlueprintName = 'Pods-DB2Slider_testTask'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-DB2Slider_testTask.framework'>

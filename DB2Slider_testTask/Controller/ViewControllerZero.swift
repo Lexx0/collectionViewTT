@@ -45,6 +45,10 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
             nextSelectorGesture.numberOfTapsRequired = 1
             cell.nextBtn?.addGestureRecognizer(nextSelectorGesture)
             
+//            self.swipeLeftGestureRecognizer.direction = .left
+//            self.swipeLeftGestureRecognizer.numberOfTouchesRequired = 1
+//            self.swipeLeftGestureRecognizer.addTarget(cell, action: #selector(self.deleteItemAtIndex(sender:)))
+            
             return cell
             
         } else {
@@ -85,9 +89,9 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         self.title = "Chats"
         
         
-        self.swipeLeftGestureRecognizer.direction = .left
-        self.swipeLeftGestureRecognizer.numberOfTouchesRequired = 1
-        self.swipeLeftGestureRecognizer.addTarget(self.collection.collectionViewLayout, action: #selector(self.deleteItemAtIndex(sender:)))
+//        self.swipeLeftGestureRecognizer.direction = .left
+//        self.swipeLeftGestureRecognizer.numberOfTouchesRequired = 1
+//        self.swipeLeftGestureRecognizer.addTarget(self.collection.collectionViewLayout, action: #selector(self.deleteItemAtIndex(sender:)))
 
     }
     
@@ -107,8 +111,13 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
         
         print("swipe")
         let indexPath0 = NSIndexPath()
-        let location = sender.location(in: collectionView(self.collection, cellForItemAt: indexPath0 as IndexPath))
-        print("index", indexPath0, "location")
+        let location0 = sender.location(in: collectionView(self.collection, cellForItemAt: indexPath0 as IndexPath))
+//        let index = location0.row
+//
+//        print("index", indexPath0, "location")
+//        
+//        self.contacts.remove(at: location0)
+//        self.collection.reloadData()
     }
     
     func nextBtnTapped(sender: AnyObject) {

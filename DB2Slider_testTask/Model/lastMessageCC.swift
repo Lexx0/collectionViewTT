@@ -9,19 +9,21 @@
 import Foundation
 import ObjectMapper
 
-class lastMessageCC: NSObject, Mappable {
+ class LastMessageCC: NSObject, Mappable {
     
-    var text: String!
+    var text: String?
     var sender: UserCC
-    var create_date: String!
+    var create_date: String
     var is_read: Bool
     
     required init?(map: Map) {
         if map.JSON["text"] as? String == nil {
             return nil
         }
-//        super.init()
-        super.init!()
+//        guard map.JSON["text"] as! String != nil else {
+//            return nil
+//        }
+        super.init()
     }
     
     func mapping(map: Map) {

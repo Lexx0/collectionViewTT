@@ -48,12 +48,32 @@ class LoginViewController: UIViewController {
 //            
 //        }
         
-        let url = URL(string: "CHANNELS_URL")!
-        var urlRequest = URLRequest(url: url)
+//        let url = URL(string: "CHANNELS_URL")!
+//        var urlRequest = URLRequest(url: url)
         
         let parameters: Parameters = [self.userNameTxtFld.text!: self.passWordTxtFld.text!]
-        _ = try URLEncoding.queryString.encode(urlRequest, with: parameters)
         
-//        performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
+        sessionManager.request(CHANNELS_URL, method: HTTPMethod.get, parameters: parameters).responseJSON { response in
+            
+            print("response", response)
+            
+            if (response.result.isSuccess == true) {
+                self.performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
+            }
+            
+//            guard let responseValue = response.result.value as? AnyObject, let chatArray = responseValue["channels"] as? [String: Any] else { return }
+//            
+//            channels = []
+//            
+//            for chat in chatArray {
+//                
+//                UsersAndMessages(JSON: chat).map {
+//                    channels.append($0)
+//                }
+////                UsersAndMessages(map: chat).map {
+////                    channels.append($0)
+//            }
+        }
+        
     }
 }

@@ -15,6 +15,7 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     @IBOutlet weak var collection: UICollectionView!
     
     var contacts = [ContactDetailsModel]()
+    var channels = [UsersAndMessages]()
 
     var swipeLeftGestureRecognizer = UISwipeGestureRecognizer()
     

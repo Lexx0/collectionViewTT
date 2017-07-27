@@ -13,15 +13,16 @@ class UsersAndMessages: NSObject, Mappable {
     
     var id:Int?
     var userCC: [UserCC] = []
-    var lastMessageCC: lastMessageCC
+    var lastMessageCC: LastMessageCC
     var unread_messages_count: Int = 0
     
-    required convenience init?(map: Map) {
+    required init?(map: Map) {
         if map.JSON["id"] as? Int == nil {
             return nil
         }
-        self.init()
+        super.init()
     }
+//    required init(map: Map)
     
     func mapping(map: Map) {
         id <- map["id"]

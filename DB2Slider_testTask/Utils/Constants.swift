@@ -17,9 +17,9 @@ public var sessionManager = Alamofire.SessionManager()
 
 //public var requestResponse = ""
 
-var channels = [UsersAndMessages]()
+struct Constants {
 
-
+}
 
 public let names = ["Rick Sanchez", "Morty", "Scorpion", "Pickachoo"]
 public let dialogs = ["donth think about it", "um, rick... This is bad idea", "Get over here", "Pika pika pikachoo"]

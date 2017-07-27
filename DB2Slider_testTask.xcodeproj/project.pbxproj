@@ -14,6 +14,7 @@
 		790309C81F2603C30083B2A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 790309C61F2603C30083B2A9 /* LaunchScreen.storyboard */; };
 		790309D31F2603C30083B2A9 /* DB2Slider_testTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790309D21F2603C30083B2A9 /* DB2Slider_testTaskTests.swift */; };
 		790309E31F2604E70083B2A9 /* ViewControllerZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790309E21F2604E70083B2A9 /* ViewControllerZero.swift */; };
+		79297C011F2A2222002178E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79297C001F2A2222002178E3 /* LoginViewController.swift */; };
 		793F6B341F28CFEC00ECD7DC /* DialogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F6B331F28CFEC00ECD7DC /* DialogCell.swift */; };
 		799996491F260CBE00126FE8 /* ContactDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996481F260CBE00126FE8 /* ContactDetailsModel.swift */; };
 		7999964B1F260D1000126FE8 /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999964A1F260D1000126FE8 /* ViewControllerOne.swift */; };
@@ -22,6 +23,7 @@
 		799996561F26314E00126FE8 /* ContactDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996541F26314E00126FE8 /* ContactDetailsCell.swift */; };
 		7999965A1F277E2200126FE8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996591F277E2200126FE8 /* Constants.swift */; };
 		7999965C1F2782B400126FE8 /* DialogDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */; };
+		E17218EB5E2EB8E3552C708F /* Pods_DB2Slider_testTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41032607E8121528FE2AD486 /* Pods_DB2Slider_testTask.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5E67BCF78B3D79DE692B8C /* Pods-DB2Slider_testTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB2Slider_testTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DB2Slider_testTask/Pods-DB2Slider_testTask.debug.xcconfig"; sourceTree = "<group>"; };
+		41032607E8121528FE2AD486 /* Pods_DB2Slider_testTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DB2Slider_testTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		790309B71F2603C20083B2A9 /* DB2Slider_testTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DB2Slider_testTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		790309BA1F2603C20083B2A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		790309BF1F2603C20083B2A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,6 +50,7 @@
 		790309D21F2603C30083B2A9 /* DB2Slider_testTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DB2Slider_testTaskTests.swift; sourceTree = "<group>"; };
 		790309D41F2603C40083B2A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		790309E21F2604E70083B2A9 /* ViewControllerZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerZero.swift; path = Controller/ViewControllerZero.swift; sourceTree = "<group>"; };
+		79297C001F2A2222002178E3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		793F6B331F28CFEC00ECD7DC /* DialogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogCell.swift; path = View/DialogCell.swift; sourceTree = "<group>"; };
 		799996481F260CBE00126FE8 /* ContactDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailsModel.swift; path = Model/ContactDetailsModel.swift; sourceTree = "<group>"; };
 		7999964A1F260D1000126FE8 /* ViewControllerOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerOne.swift; path = Controller/ViewControllerOne.swift; sourceTree = "<group>"; };
@@ -54,6 +59,7 @@
 		799996541F26314E00126FE8 /* ContactDetailsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailsCell.swift; path = View/ContactDetailsCell.swift; sourceTree = "<group>"; };
 		799996591F277E2200126FE8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Utils/Constants.swift; sourceTree = "<group>"; };
 		7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogDetailsVC.swift; path = Controller/DialogDetailsVC.swift; sourceTree = "<group>"; };
+		C1F0FDD6689A9DE050517559 /* Pods-DB2Slider_testTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DB2Slider_testTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-DB2Slider_testTask/Pods-DB2Slider_testTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17218EB5E2EB8E3552C708F /* Pods_DB2Slider_testTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5226969D41D6FD6137510BA1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E5E67BCF78B3D79DE692B8C /* Pods-DB2Slider_testTask.debug.xcconfig */,
+				C1F0FDD6689A9DE050517559 /* Pods-DB2Slider_testTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		790309AE1F2603C20083B2A9 = {
 			isa = PBXGroup;
 			children = (
 				790309B91F2603C20083B2A9 /* DB2Slider_testTask */,
 				790309D11F2603C30083B2A9 /* DB2Slider_testTaskTests */,
 				790309B81F2603C20083B2A9 /* Products */,
+				5226969D41D6FD6137510BA1 /* Pods */,
+				F2A92407BA95C6EFE6967C70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +142,7 @@
 				7999964A1F260D1000126FE8 /* ViewControllerOne.swift */,
 				7999964C1F260D3000126FE8 /* ViewControllerTwo.swift */,
 				7999964E1F260D9B00126FE8 /* ViewControllerThree.swift */,
+				79297C001F2A2222002178E3 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -155,6 +174,14 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		F2A92407BA95C6EFE6967C70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41032607E8121528FE2AD486 /* Pods_DB2Slider_testTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 790309D71F2603C40083B2A9 /* Build configuration list for PBXNativeTarget "DB2Slider_testTask" */;
 			buildPhases = (
+				9D222C0FF6B773917DF7E36C /* [CP] Check Pods Manifest.lock */,
 				790309B31F2603C20083B2A9 /* Sources */,
 				790309B41F2603C20083B2A9 /* Frameworks */,
 				790309B51F2603C20083B2A9 /* Resources */,
+				66D6BDDC2C97A847034187A5 /* [CP] Embed Pods Frameworks */,
+				10B202392CC6B37311BBAA92 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,11 +285,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10B202392CC6B37311BBAA92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DB2Slider_testTask/Pods-DB2Slider_testTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66D6BDDC2C97A847034187A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DB2Slider_testTask/Pods-DB2Slider_testTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D222C0FF6B773917DF7E36C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		790309B31F2603C20083B2A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79297C011F2A2222002178E3 /* LoginViewController.swift in Sources */,
 				790309BB1F2603C20083B2A9 /* AppDelegate.swift in Sources */,
 				7999964B1F260D1000126FE8 /* ViewControllerOne.swift in Sources */,
 				790309C31F2603C30083B2A9 /* DB2Slider_testTask.xcdatamodeld in Sources */,
@@ -405,6 +484,7 @@
 		};
 		790309D81F2603C40083B2A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E5E67BCF78B3D79DE692B8C /* Pods-DB2Slider_testTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JPTEFF2RW3;
@@ -418,6 +498,7 @@
 		};
 		790309D91F2603C40083B2A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1F0FDD6689A9DE050517559 /* Pods-DB2Slider_testTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = JPTEFF2RW3;

@@ -7,10 +7,13 @@
 //
 
 import Foundation
+import UIKit
+import Alamofire
 
-//public let URL_BASE_FOR_FACE_IMAGE = ""
-//public let URL_POKERMON = ""
+public let CHANNELS_URL = "https://iostest.db2dev.com/api/chat/channels/"
+public let MESSAGES_URL = "https://iostest.db2dev.com/api/chat/channels/1/messages/"
 
+public var sessionManager = Alamofire.SessionManager()
 
 public let names = ["Rick Sanchez", "Morty", "Scorpion", "Pickachoo"]
 

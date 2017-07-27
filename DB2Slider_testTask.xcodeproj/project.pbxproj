@@ -16,6 +16,9 @@
 		790309E31F2604E70083B2A9 /* ViewControllerZero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790309E21F2604E70083B2A9 /* ViewControllerZero.swift */; };
 		79297C011F2A2222002178E3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79297C001F2A2222002178E3 /* LoginViewController.swift */; };
 		793F6B341F28CFEC00ECD7DC /* DialogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F6B331F28CFEC00ECD7DC /* DialogCell.swift */; };
+		794286F41F2A31DC002B0D0F /* UsersAndMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794286F31F2A31DB002B0D0F /* UsersAndMessages.swift */; };
+		794286F61F2A3403002B0D0F /* UserCC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794286F51F2A3403002B0D0F /* UserCC.swift */; };
+		794286F81F2A3530002B0D0F /* lastMessageCC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794286F71F2A3530002B0D0F /* lastMessageCC.swift */; };
 		799996491F260CBE00126FE8 /* ContactDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799996481F260CBE00126FE8 /* ContactDetailsModel.swift */; };
 		7999964B1F260D1000126FE8 /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999964A1F260D1000126FE8 /* ViewControllerOne.swift */; };
 		7999964D1F260D3000126FE8 /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7999964C1F260D3000126FE8 /* ViewControllerTwo.swift */; };
@@ -52,6 +55,9 @@
 		790309E21F2604E70083B2A9 /* ViewControllerZero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerZero.swift; path = Controller/ViewControllerZero.swift; sourceTree = "<group>"; };
 		79297C001F2A2222002178E3 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controller/LoginViewController.swift; sourceTree = "<group>"; };
 		793F6B331F28CFEC00ECD7DC /* DialogCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DialogCell.swift; path = View/DialogCell.swift; sourceTree = "<group>"; };
+		794286F31F2A31DB002B0D0F /* UsersAndMessages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAndMessages.swift; sourceTree = "<group>"; };
+		794286F51F2A3403002B0D0F /* UserCC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCC.swift; path = Model/UserCC.swift; sourceTree = "<group>"; };
+		794286F71F2A3530002B0D0F /* lastMessageCC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = lastMessageCC.swift; path = Model/lastMessageCC.swift; sourceTree = "<group>"; };
 		799996481F260CBE00126FE8 /* ContactDetailsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactDetailsModel.swift; path = Model/ContactDetailsModel.swift; sourceTree = "<group>"; };
 		7999964A1F260D1000126FE8 /* ViewControllerOne.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerOne.swift; path = Controller/ViewControllerOne.swift; sourceTree = "<group>"; };
 		7999964C1F260D3000126FE8 /* ViewControllerTwo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewControllerTwo.swift; path = Controller/ViewControllerTwo.swift; sourceTree = "<group>"; };
@@ -137,12 +143,12 @@
 		790309DD1F2603D90083B2A9 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				79297C001F2A2222002178E3 /* LoginViewController.swift */,
 				790309E21F2604E70083B2A9 /* ViewControllerZero.swift */,
 				7999965B1F2782B400126FE8 /* DialogDetailsVC.swift */,
 				7999964A1F260D1000126FE8 /* ViewControllerOne.swift */,
 				7999964C1F260D3000126FE8 /* ViewControllerTwo.swift */,
 				7999964E1F260D9B00126FE8 /* ViewControllerThree.swift */,
-				79297C001F2A2222002178E3 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -162,6 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				799996481F260CBE00126FE8 /* ContactDetailsModel.swift */,
+				794286F31F2A31DB002B0D0F /* UsersAndMessages.swift */,
+				794286F71F2A3530002B0D0F /* lastMessageCC.swift */,
+				794286F51F2A3403002B0D0F /* UserCC.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -339,8 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				79297C011F2A2222002178E3 /* LoginViewController.swift in Sources */,
+				794286F81F2A3530002B0D0F /* lastMessageCC.swift in Sources */,
 				790309BB1F2603C20083B2A9 /* AppDelegate.swift in Sources */,
+				794286F41F2A31DC002B0D0F /* UsersAndMessages.swift in Sources */,
 				7999964B1F260D1000126FE8 /* ViewControllerOne.swift in Sources */,
+				794286F61F2A3403002B0D0F /* UserCC.swift in Sources */,
 				790309C31F2603C30083B2A9 /* DB2Slider_testTask.xcdatamodeld in Sources */,
 				790309E31F2604E70083B2A9 /* ViewControllerZero.swift in Sources */,
 				799996491F260CBE00126FE8 /* ContactDetailsModel.swift in Sources */,

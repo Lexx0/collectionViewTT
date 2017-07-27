@@ -246,6 +246,7 @@
                         <outlet property="passWordTxtFld" destination="WkN-6a-45X" id="cOL-e1-Scf"/>
                         <outlet property="userNameTxtFld" destination="ykO-9E-V8m" id="DI9-0C-NGm"/>
                         <outlet property="warningLbl" destination="oso-td-Gqp" id="t8n-bB-Yo1"/>
+                        <segue destination="Jsb-0q-ydm" kind="push" identifier="goto_ZeroNavController" id="WrK-ez-VGB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kjr-jg-3RM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -256,6 +257,7 @@
         <scene sceneID="cMk-6A-8NT">
             <objects>
                 <navigationController id="Jsb-0q-ydm" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="tgt-1t-kCP"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XTy-an-CT7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

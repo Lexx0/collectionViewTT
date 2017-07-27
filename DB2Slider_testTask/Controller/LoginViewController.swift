@@ -32,6 +32,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func okBtnTapped(_ sender: Any) {
         
+        sessionManager.request(<#T##url: URLConvertible##URLConvertible#>)
         
+        performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
     }
 }

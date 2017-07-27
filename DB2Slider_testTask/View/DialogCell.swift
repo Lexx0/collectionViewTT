@@ -13,4 +13,5 @@ class DialogCell: UICollectionViewCell {
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var messageFromContact: UILabel!
     
+    
 }

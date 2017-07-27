@@ -20,36 +20,13 @@ class ContactDetailsCell: UICollectionViewCell {
     
     var cell0: ContactDetailsModel!
     
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//    }
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
         
-//        badgeIntBtn.layer.cornerRadius = 5.0
-//        badgeIntBtn.layer.masksToBounds = true
-        
-//        badgeIntBtn
-//        layer.cornerRadius = 5.0
-//        super.init(frame: )
-//        let size0 = CGSize(width: super.self.view.frame.size.width, height: 100)
-//        super.init(frame: size0, collectionViewLayout, layout: UICollectionViewLayout)
-//        layer.cornerRadius = 5.0
-        
     }
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        
-//    }
 
     
-//    required init?(coder aCoder: NSCoder) {
-//        super.init(coder: aCoder)
-//        
-////        layer.cornerRadius = 5.0
-//        
-//    }
     
     func configureCell(_ cell: ContactDetailsModel) {
         self.cell0 = cell

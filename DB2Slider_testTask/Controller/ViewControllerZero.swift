@@ -10,7 +10,6 @@ import UIKit
 
 class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-//    @IBOutlet weak var segmentController: UISegmentedControl!
     @IBOutlet weak var collection: UICollectionView!
     
     var contacts = [ContactDetailsModel]()

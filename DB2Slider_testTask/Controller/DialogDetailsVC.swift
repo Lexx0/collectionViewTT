@@ -53,7 +53,5 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
         self.collection.delegate = self
         
         self.title = self.contact.name
-
-        
     }
 }

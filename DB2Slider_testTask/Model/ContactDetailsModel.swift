@@ -32,5 +32,4 @@ class ContactDetailsModel {
         
 //        self.faceURL = "\(URL_BASE_FOR_FACE_IMAGE)\(URL_POKERMON)\(self.faceID)"
     }
-    
 }

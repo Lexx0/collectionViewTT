@@ -81,7 +81,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-ew-338">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-ew-338">
                                 <rect key="frame" x="8" y="20" width="351" height="590"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O9r-F2-EZJ">
@@ -114,6 +114,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7b-5o-DNC">
                                                     <rect key="frame" x="260" y="11" width="79" height="19"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" constant="79" id="MNC-c0-C3A"/>
                                                         <constraint firstAttribute="height" constant="19" id="nQM-iy-Vuv"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -181,10 +182,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Qet-ew-338" firstAttribute="leading" secondItem="RJZ-32-qt9" secondAttribute="leadingMargin" constant="-8" id="2XP-XB-u6y"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qet-ew-338" secondAttribute="trailing" id="DBR-xr-vuZ"/>
                             <constraint firstItem="401-2O-itv" firstAttribute="top" secondItem="Qet-ew-338" secondAttribute="bottom" constant="8" id="W6i-S0-Kfc"/>
                             <constraint firstItem="Qet-ew-338" firstAttribute="top" secondItem="RJZ-32-qt9" secondAttribute="top" constant="20" id="aP2-Eb-1iU"/>
-                            <constraint firstAttribute="trailing" secondItem="Qet-ew-338" secondAttribute="trailing" constant="8" id="uQ1-Im-qBn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Kurses" image="maineCoon" id="jCY-du-yC6"/>

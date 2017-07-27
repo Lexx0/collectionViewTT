@@ -15,7 +15,9 @@ public let MESSAGES_URL = "https://iostest.db2dev.com/api/chat/channels/1/messag
 
 public var sessionManager = Alamofire.SessionManager()
 
-public var requestResponse = ""
+//public var requestResponse = ""
+
+var channels = [UsersAndMessages]()
 
 
 

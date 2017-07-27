@@ -32,8 +32,28 @@ class LoginViewController: UIViewController {
 
     @IBAction func okBtnTapped(_ sender: Any) {
         
-        sessionManager.request(<#T##url: URLConvertible##URLConvertible#>)
+        /*let request = sessionManager.request(url, method: .put, parameters: [:], encoding: order).responseString { response in
+         print("\(response)") // MARK - Problems with PUT Request
+         }
+         
+         print("LOOK HERE \(request)")
+         print("LOOK HERE \(order)")*/
+//        let parameterz = [self.userNameTxtFld.text!: self.passWordTxtFld.text!]
         
-        performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
+        
+        
+//        sessionManager.request(CHANNELS_URL, method: .get, parameters: parameterz, encoding: nil, headers: nil).responseJSON { response in
+//            
+//            print("RESPONSE ", response)
+//            
+//        }
+        
+        let url = URL(string: "CHANNELS_URL")!
+        var urlRequest = URLRequest(url: url)
+        
+        let parameters: Parameters = [self.userNameTxtFld.text!: self.passWordTxtFld.text!]
+        _ = try URLEncoding.queryString.encode(urlRequest, with: parameters)
+        
+//        performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
     }
 }

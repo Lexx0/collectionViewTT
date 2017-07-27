@@ -169,8 +169,8 @@
 			children = (
 				799996481F260CBE00126FE8 /* ContactDetailsModel.swift */,
 				794286F31F2A31DB002B0D0F /* UsersAndMessages.swift */,
-				794286F71F2A3530002B0D0F /* lastMessageCC.swift */,
 				794286F51F2A3403002B0D0F /* UserCC.swift */,
+				794286F71F2A3530002B0D0F /* lastMessageCC.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

@@ -48,10 +48,16 @@ class ViewControllerZero: UIViewController {
 //            print("request000 ", CHANNELS_URL,"111", response)
             
             guard (response.result.isSuccess == true) else { print("OI"); return}
-            guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [Any] else {print("OI 2"); return }
+            guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [[String: Any]] else {print("OI 2"); return }
             
-            print("ЮЛЯ111", rawDicts[3])
+//            print("ЮЛЯ111", rawDicts[3])
             
+            for dict in rawDicts {
+                UsersAndMessages(JSON: dict).map({
+                    self.channels.append($0)
+                })
+            }
+            print("channels.count ", self.channels.count)
 //            print("ZZZ 000", rawDicts[0])
 //            for dict in rawDicts {
 //                UsersAndMessages(JSON: dict)

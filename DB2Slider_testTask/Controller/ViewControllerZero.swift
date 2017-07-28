@@ -48,18 +48,47 @@ class ViewControllerZero: UIViewController {
 //            print("request000 ", CHANNELS_URL,"111", response)
             
             guard (response.result.isSuccess == true) else { print("OI"); return}
-            guard let jsons = response.result.value as? [String : [Any]] else {print("OI 2"); return }
+            guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [Any] else {print("OI 2"); return }
             
-            print("json", jsons)
+            print("ZZZ 000", rawDicts[0])
+//            print("ОГО ", responseZ)
+//            print("_POI", responseZ["channels"]) //ОТСЮДА ФІГНЯ
             
-            for json in jsons {
-                print("000 ", json)
-//                UsersAndMessages(JSON: json).map {
-//                    self.channels.append($0)
-//                }
-            }
+//            if let array0 = responseZ["channels"] as? [[Any]] {
+//                print("_json0", array0[0])
+//            } else if let array1 = responseZ["channels"] as? [Any] {
+//                print("ZZZ1", array1[0])
+//            } else if let array2 = responseZ["channels"] as? ([String: Any]) {
+//                print("ZZZ2", array2)
+//            } else if let array3 = responseZ["channels"] as? [AnyObject] {
+//                print("ZZZ3", array3)
+//            } else if let array4 = responseZ["channels"] as? NSArray {
+//                print("ZZZ4", array4)
+//            }
+//
+//            print("ЮЛЯ 1111", responseZ["channels"]) //responseZ["chanels"]
             
-            print("111", self.channels.count, self.channels)
+//            guard let array0 = responseZ["chanels"] as? [[Any]] else {print("OI Z0"); return} //[[String: Any]]
+////            print("_json0", array0[0])
+//            
+//            guard let array1 = responseZ["chanels"] as? [Any] else {print("OI Z1")}
+////            print("_json1", array1[0])
+//            
+//            guard let array2 = responseZ["chanels"] as? ([String: Any]) else {print("OI Z2"); return}
+//            print("_json2", array2[0])
+//            print(<#T##items: Any...##Any#>)
+            
+//            let taskArray = array0.flatMap { $0["task_id"] as? String }
+//            print(taskArray)
+            
+//            for json in jsons {
+//                print("_QWE000 ", json)
+////                UsersAndMessages(JSON: json).map {
+////                    self.channels.append($0)
+////                }
+//            }
+            
+//            print("111", self.channels.count, self.channels)
         }
         
         self.collection.reloadData()

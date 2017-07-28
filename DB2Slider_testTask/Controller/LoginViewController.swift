@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     @IBAction func okBtnTapped(_ sender: Any) {
         
         sessionManager.request(CHANNELS_URL).authenticate(user: userNameTxtFld.text!, password: passWordTxtFld.text!).responseJSON { response in
-            print("request000 ", CHANNELS_URL,"111", response)
+//            print("request000 ", CHANNELS_URL,"111", response)
             
             guard (response.result.isSuccess == true) else { self.warningLbl.isHidden = false; return}
             

@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
     func initialConfig() {
 //        self.userNameTxtFld.text = ""
 //        self.passWordTxtFld.text = ""
-        self.userNameTxtFld.text = "iostest"
-        self.passWordTxtFld.text = "iostest2k17!"
+        self.userNameTxtFld.text! = "iostest"
+        self.passWordTxtFld.text! = "iostest2k17!"
         self.warningLbl.isHidden = true
         self.okBtn.setTitle("OK", for: .normal)
     }
@@ -53,29 +53,47 @@ class LoginViewController: UIViewController {
 //        let url = URL(string: "CHANNELS_URL")!
 //        var urlRequest = URLRequest(url: url)
         
-        let parameters: Parameters = [self.userNameTxtFld.text!: self.passWordTxtFld.text!]
+//        let parameterZ: Parameters = [self.userNameTxtFld.text!: self.passWordTxtFld.text!]
         
-        sessionManager.request(CHANNELS_URL, method: HTTPMethod.get, parameters: parameters).responseJSON { response in
-            
-            print("response", response)
-            
-            if (response.result.isSuccess == true) {
-                self.performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
-            }
-            
-//            guard let responseValue = response.result.value as? AnyObject, let chatArray = responseValue["channels"] as? [String: Any] else { return }
-//            
-//            channels = []
-//            
-//            for chat in chatArray {
-//                
-//                UsersAndMessages(JSON: chat).map {
-//                    channels.append($0)
-//                }
-////                UsersAndMessages(map: chat).map {
-////                    channels.append($0)
-//            }
+//        Alamofire.request(CHANNELS_URL, method: .get, parameters: parameterZ, encoding: <#T##ParameterEncoding#>.default).response { response in
+//            print(response)
+//        }
+//        Alamofire.request(CHANNELS_URL, method: .get, parameters: parameterZ, encoding: JSONEncoding.default, headers: headerZ).response { response in
+//            print("111", response)
+//        }
+
+//        Alamofire.request(CHANNELS_URL, method: .get, parameters: parameterZ, encoding: URLEncoding.default).response { response in
+//            print("request ", CHANNELS_URL,"111", response)
+//        }
+//        Alamofire.request(CHANNELS_URL, method: .get, parameters: parameterZ, encoding: URLEncoding.default).response { response in
+//            print("request000 ", CHANNELS_URL,"111", response)
+//        }
+
+        
+        Alamofire.request(CHANNELS_URL).authenticate(user: userNameTxtFld.text!, password: passWordTxtFld.text!).responseJSON { response in
+            print("request000 ", CHANNELS_URL,"111", response)
         }
+//        alamofire.request(CHANNELS_URL, method: HTTPMethod.get, parameters: parameters).responseJSON { response in
+//            
+//            print("response", response)
+//            
+//            if (response.result.isSuccess == true) {
+//                self.performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
+//            }
+//            
+////            guard let responseValue = response.result.value as? AnyObject, let chatArray = responseValue["channels"] as? [String: Any] else { return }
+////            
+////            channels = []
+////            
+////            for chat in chatArray {
+////                
+////                UsersAndMessages(JSON: chat).map {
+////                    channels.append($0)
+////                }
+//////                UsersAndMessages(map: chat).map {
+//////                    channels.append($0)
+////            }
+//        }
         
     }
 }

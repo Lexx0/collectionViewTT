@@ -14,8 +14,10 @@ public let CHANNELS_URL = "https://iostest.db2dev.com/api/chat/channels/"
 public let MESSAGES_URL = "https://iostest.db2dev.com/api/chat/channels/1/messages/"
 
 public var sessionManager = Alamofire.SessionManager()
-
+public var headerZ:  HTTPHeaders = ["Authorization": "Basic aW9zdGVzdDppb3N0ZXN0MmsxNyE="]
 //public var requestResponse = ""
+
+
 
 struct Constants {
 

@@ -50,36 +50,20 @@ class ViewControllerZero: UIViewController {
             guard (response.result.isSuccess == true) else { print("OI"); return}
             guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [Any] else {print("OI 2"); return }
             
-            print("ZZZ 000", rawDicts[0])
-//            print("ОГО ", responseZ)
-//            print("_POI", responseZ["channels"]) //ОТСЮДА ФІГНЯ
+            print("ЮЛЯ111", rawDicts[3])
             
-//            if let array0 = responseZ["channels"] as? [[Any]] {
-//                print("_json0", array0[0])
-//            } else if let array1 = responseZ["channels"] as? [Any] {
-//                print("ZZZ1", array1[0])
-//            } else if let array2 = responseZ["channels"] as? ([String: Any]) {
-//                print("ZZZ2", array2)
-//            } else if let array3 = responseZ["channels"] as? [AnyObject] {
-//                print("ZZZ3", array3)
-//            } else if let array4 = responseZ["channels"] as? NSArray {
-//                print("ZZZ4", array4)
+//            print("ZZZ 000", rawDicts[0])
+//            for dict in rawDicts {
+//                UsersAndMessages(JSON: dict)
 //            }
-//
-//            print("ЮЛЯ 1111", responseZ["channels"]) //responseZ["chanels"]
-            
-//            guard let array0 = responseZ["chanels"] as? [[Any]] else {print("OI Z0"); return} //[[String: Any]]
-////            print("_json0", array0[0])
-//            
-//            guard let array1 = responseZ["chanels"] as? [Any] else {print("OI Z1")}
-////            print("_json1", array1[0])
-//            
-//            guard let array2 = responseZ["chanels"] as? ([String: Any]) else {print("OI Z2"); return}
-//            print("_json2", array2[0])
-//            print(<#T##items: Any...##Any#>)
-            
-//            let taskArray = array0.flatMap { $0["task_id"] as? String }
-//            print(taskArray)
+//            for dict in rawDicts {
+//                UsersAndMessages(JSON: dict).map({
+//                    self.channels.append($0)
+//                    
+//                })
+//            }
+//            print(self.channels.count)
+
             
 //            for json in jsons {
 //                print("_QWE000 ", json)

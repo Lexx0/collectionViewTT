@@ -45,43 +45,20 @@ class ViewControllerZero: UIViewController {
     func parseDialogs() {
         
         sessionManager.request(CHANNELS_URL).authenticate(user: user0, password: pass0).responseJSON { response in
-//            print("request000 ", CHANNELS_URL,"111", response)
             
             guard (response.result.isSuccess == true) else { print("OI"); return}
             guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [[String: Any]] else {print("OI 2"); return }
-            
-//            print("ЮЛЯ111", rawDicts[3])
             
             for dict in rawDicts {
                 UsersAndMessages(JSON: dict).map({
                     self.channels.append($0)
                 })
             }
-            print("channels.count ", self.channels.count)
-//            print("ZZZ 000", rawDicts[0])
-//            for dict in rawDicts {
-//                UsersAndMessages(JSON: dict)
-//            }
-//            for dict in rawDicts {
-//                UsersAndMessages(JSON: dict).map({
-//                    self.channels.append($0)
-//                    
-//                })
-//            }
-//            print(self.channels.count)
-
-            
-//            for json in jsons {
-//                print("_QWE000 ", json)
-////                UsersAndMessages(JSON: json).map {
-////                    self.channels.append($0)
-////                }
-//            }
-            
-//            print("111", self.channels.count, self.channels)
         }
         
-        self.collection.reloadData()
+        DispatchQueue.main.async {
+            self.collection.reloadData()
+        }
     }
     
     func deleteItemAtIndex(sender: UISwipeGestureRecognizer) {
@@ -95,8 +72,8 @@ class ViewControllerZero: UIViewController {
         
         let indexPathRow = sender.view.tag
         
-        let contact: ContactDetailsModel!
-        contact = contacts[indexPathRow]
+        let contact: UsersAndMessages!
+        contact = channels[indexPathRow]
         
         performSegue(withIdentifier: "goToDialogDetailsVC", sender: contact)
         
@@ -107,10 +84,10 @@ class ViewControllerZero: UIViewController {
         if segue.identifier == "goToDialogDetailsVC" {
             
             if let detailsVC = segue.destination as? DialogDetailsVC {
-                if let dialog = sender as? ContactDetailsModel {
+                if let dialog = sender as? UsersAndMessages {
                     detailsVC.contact = dialog
                     
-                    print("имя будет ", dialog.name)
+//                    print("имя будет ", dialog.name)
                 }
             }
         }
@@ -128,7 +105,7 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
         
         if let cell = collection.dequeueReusableCell(withReuseIdentifier: "ContactDetailsCell", for: indexPath) as? ContactDetailsCell {
             
-            let contactData: ContactDetailsModel! = self.contacts[indexPath.row]
+            let contactData: UsersAndMessages! = self.channels[indexPath.row]
             
             cell.configureCell(contactData)
             
@@ -153,6 +130,7 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        print("тыц ", indexPath.row)
         //        let contact: ContactDetailsModel!
         //        contact = contacts[indexPath.row]
         //
@@ -160,7 +138,8 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return contacts.count
+        print("СКОЛЬКО ТУТ ??? ", self.channels.count)
+        return channels.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {

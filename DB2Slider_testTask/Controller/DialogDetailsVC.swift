@@ -14,7 +14,7 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
     @IBOutlet weak var collection: UICollectionView!
     
     
-    public var contact: ContactDetailsModel!
+    public var contact: UsersAndMessages!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +26,12 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let cell = collection.dequeueReusableCell(withReuseIdentifier: "DialogCell", for: indexPath) as? DialogCell {
-            
-            let cellData = contact
-            
-            cell.messageFromContact.text = cellData!.longDialog[indexPath.row]
-            cell.userPic.image = UIImage(named: cellData!.profilePicture)
-            
+//
+//            let cellData = contact
+//            
+//            cell.messageFromContact.text = cellData!.longDialog[indexPath.row]
+//            cell.userPic.image = UIImage(named: cellData!.profilePicture)
+        
             return cell
         } else {
             return DialogCell()
@@ -44,7 +44,8 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.contact.longDialog.count
+        return 1
+//        return self.contact.longDialog.count
     }
     
 
@@ -52,6 +53,7 @@ class DialogDetailsVC: UIViewController, UICollectionViewDataSource, UICollectio
         self.collection.dataSource = self
         self.collection.delegate = self
         
-        self.title = self.contact.name
+        self.title = "TO DO"
+//        self.title = self.contact.name
     }
 }

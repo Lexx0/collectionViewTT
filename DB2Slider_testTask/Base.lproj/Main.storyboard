@@ -111,10 +111,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7b-5o-DNC">
-                                                    <rect key="frame" x="260" y="11" width="79" height="19"/>
+                                                    <rect key="frame" x="237" y="11" width="102" height="19"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="79" id="MNC-c0-C3A"/>
-                                                        <constraint firstAttribute="height" constant="19" id="nQM-iy-Vuv"/>
+                                                        <constraint firstAttribute="height" constant="19" id="2jf-I2-zIQ"/>
+                                                        <constraint firstAttribute="width" constant="102" id="51Y-wc-njg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
@@ -152,6 +152,7 @@
                                             <constraint firstItem="ZXi-e5-dsV" firstAttribute="top" secondItem="lMd-kQ-4Wt" secondAttribute="topMargin" constant="13" id="CBA-z1-KS5"/>
                                             <constraint firstItem="Zeb-IF-dsT" firstAttribute="top" secondItem="w7b-5o-DNC" secondAttribute="bottom" constant="8" id="Lv4-3f-VZx"/>
                                             <constraint firstItem="iGL-oP-RQq" firstAttribute="top" secondItem="lMd-kQ-4Wt" secondAttribute="top" constant="11" id="NNF-aI-HqA"/>
+                                            <constraint firstItem="Zeb-IF-dsT" firstAttribute="top" secondItem="w7b-5o-DNC" secondAttribute="bottom" constant="8" id="QnT-m6-OJY"/>
                                             <constraint firstItem="Zeb-IF-dsT" firstAttribute="top" secondItem="32K-oU-xKP" secondAttribute="bottom" constant="8" id="Rsj-9Z-kEn"/>
                                             <constraint firstItem="ZXi-e5-dsV" firstAttribute="trailing" secondItem="lMd-kQ-4Wt" secondAttribute="trailingMargin" id="W3j-99-eLR"/>
                                             <constraint firstItem="iGL-oP-RQq" firstAttribute="leading" secondItem="lMd-kQ-4Wt" secondAttribute="leading" constant="8" id="W9K-u8-8dB"/>
@@ -162,8 +163,11 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="w7b-5o-DNC" secondAttribute="trailing" constant="4" id="eOw-dB-DVD"/>
                                             <constraint firstItem="ZXi-e5-dsV" firstAttribute="leading" secondItem="AO3-1t-x81" secondAttribute="trailing" constant="8" id="gmL-V9-Di2"/>
                                             <constraint firstItem="Zeb-IF-dsT" firstAttribute="leading" secondItem="iGL-oP-RQq" secondAttribute="trailing" constant="13" id="hwi-dS-Ys6"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Zeb-IF-dsT" secondAttribute="bottom" constant="3" id="i5o-9O-Lun"/>
+                                            <constraint firstItem="Zeb-IF-dsT" firstAttribute="leading" secondItem="iGL-oP-RQq" secondAttribute="trailing" constant="13" id="i88-P9-3kK"/>
                                             <constraint firstItem="ZXi-e5-dsV" firstAttribute="centerY" secondItem="AO3-1t-x81" secondAttribute="centerY" id="n3N-jH-Zdk"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="Zeb-IF-dsT" secondAttribute="bottom" constant="3" id="sKb-Od-KFh"/>
+                                            <constraint firstItem="AO3-1t-x81" firstAttribute="leading" secondItem="Zeb-IF-dsT" secondAttribute="trailing" constant="3" id="ujk-4a-0CV"/>
                                             <constraint firstItem="ZXi-e5-dsV" firstAttribute="firstBaseline" secondItem="w7b-5o-DNC" secondAttribute="baseline" id="w8w-pj-Bgd"/>
                                             <constraint firstItem="32K-oU-xKP" firstAttribute="top" secondItem="lMd-kQ-4Wt" secondAttribute="topMargin" constant="3" id="xyK-sm-sm7"/>
                                         </constraints>

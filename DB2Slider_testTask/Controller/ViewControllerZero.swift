@@ -16,6 +16,7 @@ class ViewControllerZero: UIViewController {
     
     var contacts = [ContactDetailsModel]()
     var channels = [UsersAndMessages]()
+    var messages = [LastMessageCC]()
 
     var swipeLeftGestureRecognizer = UISwipeGestureRecognizer()
     
@@ -28,6 +29,9 @@ class ViewControllerZero: UIViewController {
 
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.collection.reloadData()
+    }
     
     func initConfig() {
 
@@ -48,6 +52,8 @@ class ViewControllerZero: UIViewController {
             
             guard (response.result.isSuccess == true) else { print("OI"); return}
             guard let responseZ = response.result.value as? [String: AnyObject], let rawDicts = responseZ["channels"] as? [[String: Any]] else {print("OI 2"); return }
+            
+            self.channels.removeAll()
             
             for dict in rawDicts {
                 UsersAndMessages(JSON: dict).map({
@@ -130,7 +136,10 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("тыц ", indexPath.row)
+//        let cell = self.channels[indexPath.row]
+//        
+//        print("тыц ", indexPath.row, "MSG ", cell.lastMessageCC?.text)
+        
         //        let contact: ContactDetailsModel!
         //        contact = contacts[indexPath.row]
         //

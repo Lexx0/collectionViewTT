@@ -13,7 +13,7 @@ class UsersAndMessages: NSObject, Mappable {
     
     var id:Int?
     var userCC: [UserCC]!
-    var lastMessageCC: LastMessageCC!
+    var lastMessageCC: LastMessageCC?
     var unread_messages_count: Int = 0
     
     required init?(map: Map) {
@@ -27,7 +27,7 @@ class UsersAndMessages: NSObject, Mappable {
     func mapping(map: Map) {
         id <- map["id"]
         userCC <- map["users"]
-        lastMessageCC <- map["lastMessageCC"]
+        lastMessageCC <- map["last_message"]
         unread_messages_count <- map["unread_messages_count"]
     }
 }

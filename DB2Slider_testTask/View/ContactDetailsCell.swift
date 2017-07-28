@@ -40,8 +40,11 @@ class ContactDetailsCell: UICollectionViewCell {
 //        task.resume()
         
         userPicImg.image = UIImage(contentsOfFile: cell0.userCC[0].photo)
+        
         nameLbl.text = cell0.userCC[0].first_name!+" "+cell0.userCC[0].last_name!+" "+cell0.userCC[0].username!
+        
         messageLbl.text = cell0.lastMessageCC?.text
+        
         dateLbl.text = cell0.lastMessageCC?.create_date
         
         if cell0.unread_messages_count == 0 {

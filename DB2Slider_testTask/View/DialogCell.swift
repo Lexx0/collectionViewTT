@@ -12,6 +12,9 @@ class DialogCell: UICollectionViewCell {
     
     @IBOutlet weak var userPic: UIImageView!
     @IBOutlet weak var messageFromContact: UILabel!
+    @IBOutlet weak var messageTimeFromContact: UILabel!
     
+    @IBOutlet weak var messageFrimMe: UILabel!
+    @IBOutlet weak var messageFromMeTime: UILabel!
     
 }

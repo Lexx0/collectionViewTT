@@ -28,7 +28,8 @@ class LoginViewController: UIViewController {
 //        self.passWordTxtFld.text = ""
         self.userNameTxtFld.text! = "iostest"
         self.passWordTxtFld.text! = "iostest2k17!"
-        self.warningLbl.text = "Неправильный Логин/Пароль"
+        self.warningLbl.text = "wrong userName / pass"
+        self.warningLbl.textColor = .red
         self.warningLbl.isHidden = true
         self.okBtn.setTitle("OK", for: .normal)
     }
@@ -53,8 +54,9 @@ class LoginViewController: UIViewController {
 extension LoginViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == userNameTxtFld || textField == passWordTxtFld {
+        if textField == self.userNameTxtFld || textField == self.passWordTxtFld {
             self.warningLbl.isHidden = true
+            print("piu")
         }
     }
 }

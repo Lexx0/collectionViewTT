@@ -8,7 +8,7 @@
 
 import UIKit
 //import Alamofire
-//import ObjectMapper
+import ObjectMapper
 
 class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -99,11 +99,21 @@ class ViewControllerZero: UIViewController, UICollectionViewDataSource, UICollec
     
     func parseDialogs() {
         
-        if contacts.count == 0 {
+        sessionManager.request(CHANNELS_URL).authenticate(user: user0, password: pass0).responseJSON { response in
+            print("request000 ", CHANNELS_URL,"111", response)
             
-            for _ in names {
-                self.contacts += [ContactDetailsModel(profilePicture: "upic0"+String(self.contacts.count), name: names[contacts.count], shortMessage: dialogs[contacts.count], badgeInt: badgeCounts[contacts.count], date: dates[contacts.count], longDialog: dialogChain[contacts.count]/*, faceID: contacts.count*/)]
+            guard (response.result.isSuccess == true) else { print("OI"); return}
+            
+            guard let json = response.result.value as? [String : Any] else { return }
+            
+            print("json", json)
+            UsersAndMessages(JSON: json).map {
+                self.channels.append($0)
             }
+            print("111", self.channels.count, self.channels)
+//
+
+            
         }
         
         self.collection.reloadData()

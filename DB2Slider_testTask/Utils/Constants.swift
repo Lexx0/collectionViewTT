@@ -15,6 +15,8 @@ public let MESSAGES_URL = "https://iostest.db2dev.com/api/chat/channels/1/messag
 
 public var sessionManager = Alamofire.SessionManager()
 public var headerZ:  HTTPHeaders = ["Authorization": "Basic aW9zdGVzdDppb3N0ZXN0MmsxNyE="]
+public var user0 = ""
+public var pass0 = ""
 //public var requestResponse = ""
 
 

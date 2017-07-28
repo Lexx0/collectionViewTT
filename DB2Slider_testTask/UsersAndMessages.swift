@@ -22,7 +22,7 @@ class UsersAndMessages: NSObject, Mappable {
         }
         super.init()
     }
-//    required init(map: Map)
+    
     
     func mapping(map: Map) {
         id <- map["id"]

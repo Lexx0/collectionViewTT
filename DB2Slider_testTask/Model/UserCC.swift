@@ -31,13 +31,7 @@ class UserCC: NSObject, Mappable {
         first_name <- map["first_name"]
         last_name <- map["last_name"]
         username <- map["username"]
-//        <- map[""]
-//        last_message
         
     }
-    
-//    "photo": "https://placeimg.com/400/400/people",
-//    "first_name": "Alex",
-//    "last_name": "Clar",
-//    "username": "alexclar"
+
 }

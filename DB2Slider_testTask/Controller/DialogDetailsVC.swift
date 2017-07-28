@@ -35,7 +35,6 @@ class DialogDetailsVC: UIViewController {
         self.collection.delegate = self
         
         self.title = self.contact.userCC[0].username!
-//        self.title = self.contact.name
     }
     
     func parseDialog() {
@@ -92,6 +91,12 @@ extension DialogDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate 
             let myName = self.contact.userCC[1].username!
             
 //            cell.userPic
+            
+            cell.messageFrimMe.layer.cornerRadius = 7.0
+            cell.messageFrimMe.layer.masksToBounds = true
+            cell.messageFromContact.layer.cornerRadius = 7.0
+            cell.messageFromContact.layer.masksToBounds = true
+            
             if (cellData.is_read == false) {
                 cell.messageFromContact.backgroundColor = .blue
             } else {

@@ -53,17 +53,7 @@ class ContactDetailsCell: UICollectionViewCell {
             self.badgeIntBtn.isHidden = false
             self.badgeIntBtn.setTitle(String(describing: cell0.unread_messages_count),for: .normal)
         }
-//        nameLbl.text = self.cell0.name.capitalized
-//        messageLbl.text = self.cell0.shortMessage
-//        dateLbl.text = self.cell0.date
-//        userPicImg.image = UIImage(named: self.cell0.profilePicture)
-//        badgeIntBtn.setTitle(self.cell0.badgeInt, for: .normal)
-        
-//        if cell0.lastMessage.is_read == true {
-//            self.badgeIntBtn.isHidden = true
-//        } else if cell0.lastMessage.is_read == false {
-//            self.badgeIntBtn.isHidden = false
-//        }
+
         
         
         badgeIntBtn.layer.cornerRadius = 15.0
@@ -72,12 +62,6 @@ class ContactDetailsCell: UICollectionViewCell {
         
         userPicImg.layer.cornerRadius = 21.0
         userPicImg.layer.masksToBounds = true
-        
-//        if self.cell0.badgeInt == "0" {
-//            badgeIntBtn.isHidden = true
-//        } else {
-//            badgeIntBtn.isHidden = false
-//        }
         
     }
 

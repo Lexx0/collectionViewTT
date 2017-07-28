@@ -8,13 +8,11 @@
 
 import UIKit
 import Alamofire
-//import ObjectMapper
 
 class ViewControllerZero: UIViewController {
     
     @IBOutlet weak var collection: UICollectionView!
     
-    var contacts = [ContactDetailsModel]()
     var channels = [UsersAndMessages]()
     var messages = [LastMessageCC]()
 
@@ -92,8 +90,6 @@ class ViewControllerZero: UIViewController {
             if let detailsVC = segue.destination as? DialogDetailsVC {
                 if let dialog = sender as? UsersAndMessages {
                     detailsVC.contact = dialog
-                    
-//                    print("имя будет ", dialog.name)
                 }
             }
         }
@@ -134,20 +130,8 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-//        let cell = self.channels[indexPath.row]
-//        
-//        print("тыц ", indexPath.row, "MSG ", cell.lastMessageCC?.text)
-        
-        //        let contact: ContactDetailsModel!
-        //        contact = contacts[indexPath.row]
-        //
-        //        performSegue(withIdentifier: "goToDialogDetailsVC", sender: contact)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("СКОЛЬКО ТУТ ??? ", self.channels.count)
+
         return channels.count
     }
     

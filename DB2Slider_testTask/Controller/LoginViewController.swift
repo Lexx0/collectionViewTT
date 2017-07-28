@@ -21,11 +21,11 @@ class LoginViewController: UIViewController {
 
         initialConfig()
         
+        todaysDate()
     }
 
     func initialConfig() {
-//        self.userNameTxtFld.text = ""
-//        self.passWordTxtFld.text = ""
+
         self.userNameTxtFld.text! = "iostest"
         self.passWordTxtFld.text! = "iostest2k17!"
         self.warningLbl.text = "wrong userName / pass"
@@ -37,15 +37,27 @@ class LoginViewController: UIViewController {
     @IBAction func okBtnTapped(_ sender: Any) {
         
         sessionManager.request(CHANNELS_URL).authenticate(user: userNameTxtFld.text!, password: passWordTxtFld.text!).responseJSON { response in
-//            print("request000 ", CHANNELS_URL,"111", response)
             
-            guard (response.result.isSuccess == true) else { self.warningLbl.isHidden = false; return}
+            guard (response.result.isSuccess == true) else {
+                self.warningLbl.isHidden = false
+                return
+            }
             
             user0 = self.userNameTxtFld.text!
             pass0 = self.passWordTxtFld.text!
             
             self.performSegue(withIdentifier: "goto_ZeroNavController", sender: self)
         }
+    }
+    
+    func todaysDate() {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "y-MM-dd"
+        timeZero = formatter.string(from: date)
+        
+        let yesterday = Date().yesterday
+        dayBefore = formatter.string(from: yesterday)
     }
 }
 

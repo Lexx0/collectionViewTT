@@ -22,15 +22,7 @@ class LastMessageCC: NSObject, Mappable {
         }
         super.init()
     }
-//    required init?(map: Map) {
-//        if map.JSON["text"] as? String == nil {
-//            return nil
-//        }
-////        guard map.JSON["text"] as! String != nil else {
-////            return nil
-////        }
-//        super.init()
-//    }
+
     
     func mapping(map: Map) {
         text <- map["text"]

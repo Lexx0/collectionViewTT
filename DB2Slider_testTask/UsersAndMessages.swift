@@ -12,8 +12,8 @@ import ObjectMapper
 class UsersAndMessages: NSObject, Mappable {
     
     var id:Int?
-    var userCC: [UserCC] = []
-    var lastMessageCC: LastMessageCC
+    var userCC: [UserCC]?
+    var lastMessageCC: LastMessageCC?
     var unread_messages_count: Int = 0
     
     required init?(map: Map) {

@@ -27,6 +27,11 @@ class UserCC: NSObject, Mappable {
     
     func mapping(map: Map) {
         id <- map["id"]
+        photo <- map["photo"]
+        first_name <- map["first_name"]
+        last_name <- map["last_name"]
+        username <- map["username"]
+//        <- map[""]
 //        last_message
         
     }

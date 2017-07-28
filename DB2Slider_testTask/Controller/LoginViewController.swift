@@ -24,8 +24,10 @@ class LoginViewController: UIViewController {
     }
 
     func initialConfig() {
-        self.userNameTxtFld.text = ""
-        self.passWordTxtFld.text = ""
+//        self.userNameTxtFld.text = ""
+//        self.passWordTxtFld.text = ""
+        self.userNameTxtFld.text = "iostest"
+        self.passWordTxtFld.text = "iostest2k17!"
         self.warningLbl.isHidden = true
         self.okBtn.setTitle("OK", for: .normal)
     }

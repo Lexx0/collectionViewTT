@@ -35,7 +35,7 @@ class ContactDetailsCell: UICollectionViewCell {
         
         messageLbl.text = cell0.lastMessageCC?.text
         
-        dateLbl.text = dateManipulation(cell0.lastMessageCC?.create_date)
+        dateLbl.text = dateManipulation(time0: cell0.lastMessageCC!.create_date)
         
         if cell0.unread_messages_count == 0 {
             self.badgeIntBtn.isHidden = true

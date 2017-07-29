@@ -111,6 +111,17 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
             
             cell.configureCell(contactData)
             
+            let URL0 = URL(fileURLWithPath: contactData.userCC[0].photo)
+            downloadImage(url: URL0, userPic: cell.userPicImg)
+//            let url0 = contactData.userCC[0].photo
+//            let url0 = URL(fileURLWithPath: contactData.userCC[0].photo)
+//            var imageData = NSData(contentsOf: url0)
+//            let url0 = URL(fileURLWithPath: contactData.userCC[0].photo)
+//            print(url0)
+//            let imageData = Data(
+//            var imageData: NSData = NSData(contentsOfURL: url0!, options: NSData.ReadingOptions.DataReadingMappedIfSafe, error: nil)!
+//            cell.userPicImg.image = UIImage(data: imageData as! Data)
+            
             cell.nextBtn.tag = indexPath.row
             
             //            cell.nextBtn.addTarget(self, action: Selector("nextBtnTapped:"), for: .touchUpInside)
@@ -118,6 +129,8 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
             let nextSelectorGesture = UITapGestureRecognizer(target: self, action: nextSelector)
             nextSelectorGesture.numberOfTapsRequired = 1
             cell.nextBtn?.addGestureRecognizer(nextSelectorGesture)
+            
+            
             
             //            self.swipeLeftGestureRecognizer.direction = .left
             //            self.swipeLeftGestureRecognizer.numberOfTouchesRequired = 1
@@ -142,5 +155,23 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         
         return CGSize(width: self.view.frame.size.width, height: 100)
+    }
+    
+    func downloadImage(url: URL, userPic: UIImageView) {
+        print("Download Started")
+        getDataFromUrl(url: url) { (data, response, error)  in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { () -> Void in
+                userPic.image = UIImage(data: data)
+            }
+        }
+    }
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
     }
 }

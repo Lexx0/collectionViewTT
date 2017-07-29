@@ -19,6 +19,7 @@ class ContactDetailsCell: UICollectionViewCell {
     @IBOutlet weak var nextBtn: UIButton!
     
     var cell0: UsersAndMessages!
+//    var picData: Data?
     
     required init?(coder aCoder: NSCoder) {
         super.init(coder: aCoder)
@@ -27,25 +28,14 @@ class ContactDetailsCell: UICollectionViewCell {
 
     func configureCell(_ cell: UsersAndMessages) {
         self.cell0 = cell
-
-//        let URLSTRING = cell0.userCC[0].photo as! URL
-//        
-//        let task = URLSession.shared.dataTask(with: URLSTRING) { data, response, error in
-//            guard let data = data, error == nil else { return }
-//            
-//            DispatchQueue.main.sync() {
-//                self.userPicImg.image = UIImage(data: data)
-//            }
-//        }
-//        task.resume()
         
-        userPicImg.image = UIImage(contentsOfFile: cell0.userCC[0].photo)
+        downloadPic(url: self.cell0.userCC[0].photo)
         
         nameLbl.text = cell0.userCC[0].first_name!+" "+cell0.userCC[0].last_name!+" "+cell0.userCC[0].username!
         
         messageLbl.text = cell0.lastMessageCC?.text
         
-        dateLbl.text = cell0.lastMessageCC?.create_date
+        dateLbl.text = dateManipulation(cell0.lastMessageCC?.create_date)
         
         if cell0.unread_messages_count == 0 {
             self.badgeIntBtn.isHidden = true
@@ -53,16 +43,25 @@ class ContactDetailsCell: UICollectionViewCell {
             self.badgeIntBtn.isHidden = false
             self.badgeIntBtn.setTitle(String(describing: cell0.unread_messages_count),for: .normal)
         }
-
-        
         
         badgeIntBtn.layer.cornerRadius = 15.0
         badgeIntBtn.layer.masksToBounds = true
         badgeIntBtn.backgroundColor = .blue
-        
+
         userPicImg.layer.cornerRadius = 21.0
         userPicImg.layer.masksToBounds = true
+    }
+    
+    func downloadPic(url: String) {
         
+        let url0 = URL(string: url)
+        
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url0!)
+            DispatchQueue.main.async {
+                self.userPicImg.image = UIImage(data: data!)
+            }
+        }
     }
 
 }

@@ -71,6 +71,7 @@ class DialogDetailsVC: UIViewController {
             }
         }
     }
+    
 }
 
 
@@ -87,10 +88,10 @@ extension DialogDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate 
             
             let cellData = self.messagesInExplicitDialog[indexPath.row]
             
+//            var rawData = Data()
+            
             let sender0 = cellData.sender?.username
             let myName = self.contact.userCC[1].username!
-            
-//            cell.userPic
             
             cell.messageFrimMe.layer.cornerRadius = 7.0
             cell.messageFrimMe.layer.masksToBounds = true
@@ -104,26 +105,37 @@ extension DialogDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate 
             }
             cell.messageFrimMe.backgroundColor = .gray
             
+            let time = dateManipulation(time0: cellData.create_date!)
+            
             if (sender0 == myName) {
-                print("message", cellData.text)
+                
                 cell.messageFrimMe.isHidden = false
                 cell.messageFromMeTime.isHidden = false
                 cell.messageFrimMe.text = cellData.text
-                cell.messageFromMeTime.text = cellData.create_date
+//                cell.messageFromMeTime.text = cellData.create_date
+                cell.messageFromMeTime.text = time
+                
                 
                 cell.messageFromContact.isHidden = true
                 cell.messageTimeFromContact.isHidden = true
+                cell.userPic.isHidden = true
             
                 
             } else if (sender0 != myName) {
-                print("message", cellData.text)
+//                downloadPic(url0: (cellData.sender?.photo)!, &rawData)
+                print("ccskm__ ", cellData.sender!.photo)
+                
                 cell.messageFrimMe.isHidden = true
                 cell.messageFromMeTime.isHidden = true
                 
                 cell.messageFromContact.isHidden = false
                 cell.messageTimeFromContact.isHidden = false
                 cell.messageFromContact.text = cellData.text
-                cell.messageTimeFromContact.text = cellData.create_date
+//                cell.messageTimeFromContact.text = cellData.create_date
+                cell.messageTimeFromContact.text = time
+                
+                cell.userPic.isHidden = false
+//                cell.userPic.image = UIImage(data: rawData)
             }
 
             return cell

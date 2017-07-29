@@ -65,6 +65,18 @@ class ViewControllerZero: UIViewController {
         }
     }
     
+//    func downloadPic(url: String) {
+//
+//        let url0 = URL(string: url)
+//
+//        DispatchQueue.global().async {
+//            let data = try? Data(contentsOf: url0!)
+//            DispatchQueue.main.async {
+//                ContactDetailsCell.userPicImg.image = UIImage(data: data!)
+//            }
+//        }
+//    }
+    
     func deleteItemAtIndex(sender: UISwipeGestureRecognizer) {
         
         print("swipe")
@@ -109,18 +121,14 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
             
             let contactData: UsersAndMessages! = self.channels[indexPath.row]
             
+//            let URL0 = URL(fileURLWithPath: contactData.userCC[0].photo)
+//            downloadImage(url: URL0, userPic: cell.userPicImg)
+//            var dataRaw = Data()
+//            downloadImage(url: URL0, userPic: cell.picData!)
+//            downloadImage(url: URL0)
+            
             cell.configureCell(contactData)
             
-            let URL0 = URL(fileURLWithPath: contactData.userCC[0].photo)
-            downloadImage(url: URL0, userPic: cell.userPicImg)
-//            let url0 = contactData.userCC[0].photo
-//            let url0 = URL(fileURLWithPath: contactData.userCC[0].photo)
-//            var imageData = NSData(contentsOf: url0)
-//            let url0 = URL(fileURLWithPath: contactData.userCC[0].photo)
-//            print(url0)
-//            let imageData = Data(
-//            var imageData: NSData = NSData(contentsOfURL: url0!, options: NSData.ReadingOptions.DataReadingMappedIfSafe, error: nil)!
-//            cell.userPicImg.image = UIImage(data: imageData as! Data)
             
             cell.nextBtn.tag = indexPath.row
             
@@ -157,21 +165,28 @@ extension ViewControllerZero: UICollectionViewDataSource, UICollectionViewDelega
         return CGSize(width: self.view.frame.size.width, height: 100)
     }
     
-    func downloadImage(url: URL, userPic: UIImageView) {
-        print("Download Started")
-        getDataFromUrl(url: url) { (data, response, error)  in
-            guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
-            print("Download Finished")
-            DispatchQueue.main.async() { () -> Void in
-                userPic.image = UIImage(data: data)
-            }
-        }
-    }
-    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
-        URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            completion(data, response, error)
-            }.resume()
-    }
+    
+    
+//    func downloadImage(url: URL, userPic: ) {
+////    func downloadImage(url: URL, userPic: Data) {
+////    func downloadImage(_ dataForPic: inout Data, url: URL) {
+//        print("Download Started")
+//        getDataFromUrl(url: url) { (data, response, error)  in
+//            guard let data = data, error == nil else { return }
+//            print(response?.suggestedFilename ?? url.lastPathComponent)
+//            print("Download Finished")
+//            DispatchQueue.main.async() { () -> Void in
+//                
+////                userPic.image = UIImage(data: data)
+////                userPic = data
+////                dataForPic = data
+//            }
+//        }
+//    }
+//    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+//        URLSession.shared.dataTask(with: url) {
+//            (data, response, error) in
+//            completion(data, response, error)
+//            }.resume()
+//    }
 }
